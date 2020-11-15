@@ -1,0 +1,184 @@
+/* ==UserStyle==
+@name           Django Documentation [Dark at dusk]
+@description    Dark theme for the Django framework documentation
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/django-docs-dark-at-dusk.user.css
+@advanced color background-color "Background color" #101c29
+@advanced color content-background-color "Content background color" #0c141d
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #1e9962
+@advanced color secondary-color "Secondary color" #f56161
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Font stack for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Font stack for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+@-moz-document domain("docs.djangoproject.com") {
+    html {
+        --background-color: /*[[background-color]]*/;
+        --content-background-color: /*[[content-background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --secondary-color: /*[[secondary-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+    
+    body {
+        color: var(--text-color);
+        background: var(--background-color);
+        font-family: var(--fonts-body);
+    }
+    
+    /* Main content */
+    [role="main"] {
+        color: var(--text-color);
+        background: var(--content-background-color);
+    }
+
+    .mdzr-boxshadow .sidebar-right [role="main"] {
+        box-shadow: 0px 0px 0 0 var(--content-background-color), 0px 0px 0 0 var(--content-background-color), -460px 0 0 0 var(--content-background-color), -1000px 0 0 0 var(--content-background-color), 0px 600px 0 0px var(--content-background-color), -460px 600px 0 0px var(--content-background-color);
+    }
+
+    #docs-content, h1, h2, h3, h4, h5, h6 {
+        font-family: var(--fonts-body);
+    }
+
+    [role="main"] h1, h3, h4 {
+        color: var(--primary-color);
+    }
+
+    tt, code, kbd, span.pre, pre, samp {
+        font-family: var(--fonts-code);
+    }
+
+    tt, code, kbd, pre, samp {
+        color: var(--primary-color);
+    }
+
+    #docs-content a.reference {
+        color: var(--secondary-color) !important;
+    }
+
+    #docs-content a.reference:active, #docs-content a.reference:focus, #docs-content a.reference:hover {
+        background: #072715;
+    }
+    
+    [role="main"] .section {
+        border-color: #13563f;
+    }
+    
+    table.docutils td, table.docutils th {
+        border-color: #13563f;
+    }
+
+    .browse-horizontal {    
+        border-color: #13563f;
+    }
+    
+    .code-block-caption {
+        background: #083820;
+        color: #bcdacf;
+    }
+    
+    .console-block>label {
+        color: white;
+        cursor: pointer;
+    }
+    
+    .console-block > input:checked+label {
+        color: white;
+        background: #1e1e1e;
+        border-color: transparent;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .highlight {
+        background: var(--code-background-color);
+        font-family: var(--fonts-code);
+        border: none;
+    }
+    
+    /* Modules paths */
+    .highlight .nn {
+        color: #7878d6;
+    }
+    
+    /* Class names */
+    .highlight .nc {
+        color: #c16c33;
+    }
+    
+    /* Decorators names */
+    .highlight .nd {
+        color: #b158e8;
+    }
+    
+    /* String contents */
+    .highlight .s, .highlight .s1, .highlight .s2 {
+        color: #ff7c7c;
+    }
+    
+    /* Comments */
+    .highlight .sd {
+        color: #ff7c7c;
+    }
+    
+    /* Functions names */
+    .highlight .nf {
+        color: #6060ff;
+    }
+    
+    /* Operators */
+    .highlight .ow {
+        color: #9034ca;
+    }
+    
+    /* Keywords names */
+    .highlight .kn, .highlight .k {
+        color: #1b7b1b;
+    }
+    
+    /* Template variables names */
+    .highlight .nv {
+        color: #6060ff;
+    }
+    
+    /* Special characters */
+    .highlight .o {
+        color: #999999;
+    }
+    
+    /* Numbers */
+    .highlight .mi {
+        color: #c3c3c3;
+    }
+    
+    /* Output quotes */
+    .highlight .gp {
+        color: #6f6f6f;
+    }
+
+    [role="complementary"] a {
+        color: var(--primary-color);
+    }
+    
+    div.admonition, div.note {
+        background-color: #102238;
+        border: none;
+    }
+    
+    .note.warning, .admonition.warning, .help-block.warning {
+        background-color: #2f2b14;
+    }
+    
+    .versionadded, .versionchanged, .deprecated, .versionmodified {
+        border-color: #123764;
+    }
+
+}
