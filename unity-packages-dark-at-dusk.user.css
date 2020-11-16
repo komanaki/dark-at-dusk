@@ -1,0 +1,140 @@
+/* ==UserStyle==
+@name           Unity Packages Documentation [Dark at dusk]
+@description    Dark theme for the Unity Packages documentation
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/unity-packages-dark-at-dusk.user.css
+@advanced color background-color "Background color" #0c141d
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #1d3148
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Font stack for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Font stack for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+@-moz-document url-prefix("https://docs.unity3d.com/Packages/") {
+    html {
+        --background-color: /*[[background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+    
+    html, body {
+        color: var(--text-color);
+        background: var(--background-color);
+        font-family: var(--fonts-body);
+    }
+
+    .navbar-default {
+        background-color: var(--primary-color);
+        border: none;
+    }
+
+    .component-select__current {
+        color: white;
+        background-color: rgb(255 255 255 / 44%);
+    }
+
+    h1, h2, h3 {
+        color: white;
+    }
+
+    table {
+        background: white;
+        color: black;
+    }
+
+    code {
+        color: white;
+        background: #2c3846;
+        font-family: var(--fonts-code);
+    }
+
+    pre {
+        font-family: var(--fonts-code);
+        background: var(--code-background-color);
+        border: none;
+    }
+
+    pre .hljs {
+        color: white;
+    }
+
+    .sidefilter, .sidetoc, .toc {
+        color: white;
+        background-color: #0c141d !important;
+        border: none;
+    }
+
+    .toc .nav > li > a, .toc .nav > li > a:hover {
+        color: white;
+    }
+
+    article {
+        font-size: 16px;
+        font-family: Inter;
+        line-height: 25px;
+    }
+
+    table {
+        color: white;
+        background: transparent;
+    }
+
+    tr {
+        background: #112031;
+    }
+
+    table, th, td {
+        border-color: #1e3248 !important;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd) { 
+        background: transparent;
+    }
+    
+    .inheritance h5, .inheritedMembers h5, article h4 {
+        border-color: var(--primary-color);
+    }
+    
+    blockquote {
+        border-color: #337ab7;
+    }
+    
+    hr {
+        border-color: var(--primary-color);
+    }
+
+    td {
+        color: var(--text-color);
+        padding: 1.5rem !important;
+    }
+    
+    .css .hljs-at_rule, .css .hljs-important, .go .hljs-typename, .haskell .hljs-type, .hljs-keyword, .http .hljs-request, .ini .hljs-setting, .java .hljs-javadoctag, .javascript .hljs-javadoctag, .javascript .hljs-tag, .less .hljs-at_rule, .less .hljs-tag, .nginx .hljs-title, .objectivec .hljs-preprocessor, .php .hljs-phpdoc, .scss .hljs-at_rule, .scss .hljs-important, .scss .hljs-tag, .sql .hljs-built_in, .stylus .hljs-at_rule, .swift .hljs-preprocessor {
+        color: #da3e86;
+    }
+    
+    .bash .hljs-title, .c .hljs-title, .coffeescript .hljs-title, .cpp .hljs-title, .cs .hljs-title, .css .hljs-class, .css .hljs-id, .css .hljs-pseudo, .diff .hljs-chunk, .haskell .hljs-pragma, .haskell .hljs-title, .ini .hljs-title, .java .hljs-title, .javascript .hljs-title, .less .hljs-class, .less .hljs-id, .less .hljs-pseudo, .makefile .hljs-title, .objectivec .hljs-title, .perl .hljs-sub, .php .hljs-title, .puppet .hljs-title, .python .hljs-decorator, .python .hljs-title, .ruby .hljs-parent, .ruby .hljs-title, .rust .hljs-title, .scss .hljs-class, .scss .hljs-id, .scss .hljs-pseudo, .stylus .hljs-class, .stylus .hljs-id, .stylus .hljs-pseudo, .stylus .hljs-title, .swift .hljs-title, .xml .hljs-attribute {
+        color: #a278e0;
+    }
+    
+    .affix ul > li > a {
+        color: var(--text-color);
+    }
+    
+    .affix ul > li > a:hover {
+        color: white;
+    }
+    
+    .footer {
+        color: white;
+        background-color: var(--primary-color);
+        border: none;
+    }
+}
