@@ -1,0 +1,143 @@
+/* ==UserStyle==
+@name           Celery Documentation [Dark at dusk]
+@description    Dark theme for the Celery documentation
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/celery-docs-dark-at-dusk.user.css
+@advanced color background-color "Background color" #0c141d
+@advanced color text-color "Text color" #c5c5c5
+@advanced color headlines-color "Headlines color" #ffffff
+@advanced color primary-color "Primary color" #348613
+@advanced color breadcrumb-color "Breadcrumb navigation color" #0e1d0c
+@advanced color blocks-background-color "Blocks background color" #102238
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Fonts for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Fonts for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+@-moz-document domain("docs.celeryproject.org") {
+    html {
+        --background-color: /*[[background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --headlines-color: /*[[headlines-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --breadcrumb-color: /*[[breadcrumb-color]]*/;
+        --blocks-background-color: /*[[blocks-background-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+
+    body {
+        color: var(--text-color);
+        background: var(--background-color);
+        font-family: var(--fonts-body);
+    }
+
+    div.related {
+        background: var(--breadcrumb-color);
+    }
+    
+    a {
+        color: var(--primary-color);
+    }
+
+    /* Sidebar */    
+    div.sphinxsidebar a {
+        color: var(--headlines-color);
+    }
+    
+    div.sphinxsidebar h3, div.sphinxsidebar h4 {
+        color: var(--headlines-color);
+        font-family: var(--fonts-body);
+    }
+
+    div.body {
+        color: var(--text-color);
+        background: var(--background-color);
+    }
+
+    div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+        color: var(--headlines-color);
+        font-family: var(--fonts-body);
+    }
+
+    div.sidebar {
+        color: var(--headlines-color);
+        background-color: var(--blocks-background-color);
+        border: none;
+    }
+    
+    div.topic {
+        background-color: var(--blocks-background-color);
+        border: none;
+    }
+
+    div.topic li {
+        line-height: 1.6em;
+    }
+
+    dt:target, span.highlighted {
+        background-color: #2b62a0;
+    }
+
+    /* String contents */
+    .highlight .s, .highlight .s1, .highlight .s2 {
+        background-color: #24466d;
+    }
+    
+    /* Numbers */
+    .highlight .m, .highlight .mf, .highlight .mi {
+        color: #6060ff;
+    }
+    
+    /* Special characters */
+    .highlight .o {
+        color: #999999;
+    }
+    
+    /* Regex appendix */
+    .highlight .sa {
+        color: #5993d6;
+    }
+
+    a.reference {
+        text-decoration: underline;
+        border: none;
+    }
+    
+    a.reference:hover {
+        border: none;
+    }
+
+    pre {
+        background: var(--code-background-color);
+        font-family: var(--fonts-code);
+        border: none;
+        border-radius: 0;
+    }
+
+    div.admonition, div.note {
+        background-color: var(--blocks-background-color);
+        border: none;
+    }
+
+    div.admonition p.admonition-title {
+        color: var(--headlines-color);
+        font-family: var(--fonts-body);
+    }
+
+    div.warning {
+        background-color: #441919;
+        border: none;
+    }
+    
+    table.docutils {
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
