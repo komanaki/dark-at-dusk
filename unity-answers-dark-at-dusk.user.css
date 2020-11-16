@@ -1,0 +1,205 @@
+/* ==UserStyle==
+@name           Unity Answers [Dark at dusk]
+@description    Dark theme for the Unity Answers website
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/unity-answers-dark-at-dusk.user.css
+@advanced color background-color "Background color" #0c141d
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #2196f3
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Font stack for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Font stack for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+@-moz-document domain("answers.unity.com") {
+    html {
+        --background-color: /*[[background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+    
+    html, body {
+        color: var(--text-color);
+        background: var(--background-color);
+        font-family: var(--fonts-body);
+    }
+
+    ::marker {
+        color: #999;
+    }
+
+    nav.sub-nav div.sub-fill {
+        background-color: var(--primary-color);
+    }
+
+    nav.top-nav ul li a.active-trail {
+        color: var(--primary-color);
+    }
+
+    nav.sub-nav ul li a, nav.sub-nav ul li a:hover, nav.sub-nav ul li a.active-trail {
+        color: white;
+    }
+
+    .breadcrumb > li {
+        text-shadow: none;
+    }
+
+    .alert-info {
+        background-color: #225b77;
+        border-color: #bce8f1;
+        color: white;
+        border: none;
+        text-shadow: none;
+    }
+
+    .tags .tag {
+        color: black;
+    }
+
+    .btn-success, .btn-success:hover {
+        background-color: var(--primary-color);
+    }
+
+    a {
+        color: #7ca6da;
+    }
+
+    a:hover, a:focus {
+        color: #87bdff;
+    }
+
+    .answer-list .widget-content .answer-container, .answer-list .widget-content .reply-container {
+        background-color: transparent;
+    }
+
+    .post-container .question h1 {
+        margin: 1rem 0;
+        color: white;
+    }
+
+
+    .question-body p > img {
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    .label-success, .badge-success {
+        font-weight: normal;
+    }
+
+    .author-info {
+        padding-top: 0.5rem;
+        font-size: 15px;
+    }
+
+    .muted.author-info, .muted.post-info {
+        color: white;
+    }
+
+    .muted.author-info strong {
+        font-weight: normal;
+    }
+
+    .comment {
+        padding-top: 1.5rem;
+    }
+
+    .comment .comment-age, .comment .comment-parent, .comment .comment-score {
+        color: white;
+    }
+
+    .comments-container .comment .comment-header {
+        padding-bottom: 1rem;
+        font-size: 14px;
+    }
+
+    .comment-user-gravatar {
+        left: -4px;
+        top: 22px;
+    }
+
+    .comment-text {
+        color: var(--text-color);
+        font-size: 16px;
+    }
+
+    .comment-content {
+        padding-bottom: 1.5rem;
+    }
+
+    code, pre {
+        color: white;
+        font-family: var(--fonts-code);
+        background: var(--code-background-color);
+    }
+    
+    code {
+        padding-left: 4px;
+        border-color: #3c3c3c;
+    }
+
+    pre {
+        margin: 1rem 0;
+    }
+
+    .pln {
+        color: white;
+    }
+
+    .kwd {
+        color: #9494fd;
+    }
+
+    .typ {
+        color: #ff86ff;
+    }
+
+    .pun, .opn, .clo {
+        color: #d6d68e;
+    }
+
+    .com {
+        color: #f7b4b4;
+    }
+
+    li.L1, li.L3, li.L5, li.L7, li.L9 {
+        background: rgb(255 255 255 / 2%);
+    }
+
+    .widget .widget-header h3 {
+        color: white;
+    }
+
+
+    .answer-body, .reply-body {
+        padding: 1.5rem 0;
+    }
+
+    .accepted-answer .answer {
+        background-color: #17310c;
+        color: #ffffff;
+    }
+
+    .comments-container .comment, .comments-container .comments-expand {
+        border-top: dotted #3c5e84 1px;
+    }
+
+    .sidebarTwo h3 {
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .help-block, .help-inline {
+        color: var(--text-color);
+    }
+
+    .form-actions {
+        background: transparent;
+    }
+}
