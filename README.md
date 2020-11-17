@@ -15,6 +15,13 @@ Each theme is made available under the [MIT license](https://tldrlegal.com/licen
 ![First example of dark theme applied to Django documentation website](img/django1.png)
 ![Second example of dark theme applied to Django documentation website](img/django2.png)
 
+## Django REST Framework Documentation [Dark at dusk]
+
+[![Install directly with Stylus badge](https://img.shields.io/badge/Install%20with-Stylus-116b59.svg?longCache=true&style=flat&logo=css3)](https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/django-rest-docs-dark-at-dusk.user.css)
+
+![First example of dark theme applied to Django REST framework documentation website](img/django-rest1.png)
+![Second example of dark theme applied to Django REST framework documentation website](img/django-rest2.png)
+
 ## Celery Documentation [Dark at dusk]
 
 [![Install directly with Stylus badge](https://img.shields.io/badge/Install%20with-Stylus-116b59.svg?longCache=true&style=flat&logo=css3)](https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/celery-docs-dark-at-dusk.user.css)

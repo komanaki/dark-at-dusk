@@ -1,0 +1,177 @@
+/* ==UserStyle==
+@name           Django REST Framework Documentation [Dark at dusk]
+@description    Dark theme for Django REST Framework documentation
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/django-rest-docs-dark-at-dusk.user.css
+@advanced color background-color "Background color" #0c141d
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #1d3148
+@advanced color secondary-color "Secondary color" #244e7d
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Font stack for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Font stack for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+
+@-moz-document url-prefix("https://www.django-rest-framework.org/") {
+    html {
+        --background-color: /*[[background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --secondary-color: /*[[secondary-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+    
+    html, body {
+        color: var(--text-color);
+        background: var(--background-color);
+        font-family: var(--fonts-body);
+    }
+
+    body a {
+        color: white;
+    }
+    
+    body a:hover {
+        color: #ffa7a7;
+    }
+    
+    .navbar .navbar-inner {
+        background: var(--primary-color);
+        border-color: var(--secondary-color);
+    }
+    
+    .navbar .btn-inverse, .navbar .btn-primary {
+        padding: 6px 13px;
+        background: var(--secondary-color) !important;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .navbar .btn-inverse:hover, .navbar .btn-primary:hover {
+        filter: brightness(1.2);
+    }
+    
+    .dropdown-menu {
+        margin: 0;
+        background: var(--primary-color);
+        border-radius: 0;
+    }
+    
+    .dropdown-menu a {
+        color: white !important;
+    }
+    
+    .navbar .navbar-inner .dropdown-menu li a:hover {
+        background: var(--secondary-color);
+    }
+    
+    .navbar-inverse .nav .dropdown .active > a, .navbar-inverse .nav .dropdown .active > a:hover, .navbar-inverse .nav .dropdown .active > a:focus {
+        background-color: var(--secondary-color);
+    }
+    
+    #table-of-contents hr, body hr {
+        border-top: 0;
+        border-color: var(--secondary-color);
+    }
+    
+    .nav.well.sidebar-nav-fixed {
+        overflow: auto;
+        background: transparent;
+        border: none;
+    }
+    
+    .nav-list > li > a, .nav-list .nav-header {
+        text-shadow: none;
+    }
+    
+    .nav > li > a:hover {
+        color: white;
+        background-color: var(--secondary-color);
+    }
+    
+    .nav li.main a {
+        font-weight: normal;
+        padding-left: 10px;
+    }
+    
+    #sidebarInclude a.promo {
+        color: white;
+    }
+    
+    #main-content {
+        font-size: 16px;
+        line-height: 23px;
+    }
+    
+    .toclink {
+        color: white;
+    }
+    
+    blockquote {
+        color: var(--text-color);
+    }
+    
+    code, pre {
+        font-family: var(--fonts-code);
+    }
+    
+    code {
+        color: #ff95b0;
+        background: #353535;
+        border: none;
+    }
+    
+    h1 code, h2 code, h3 code, h4 code, h5 code {
+        color: white;
+    }
+    
+    pre.well {
+        color: var(--text-color);
+        background: var(--code-background-color);
+        border: none;
+    }
+    
+    .pln {
+        color: white;
+    }
+    
+    .str, .atv {
+        color: #ff95b0;
+    }
+    
+    .kwd, .prettyprint .tag {
+        color: #6287ff;
+    }
+    
+    .lit {
+        color: #218fde;
+    }
+    
+    table, th, td {
+        border-color: #1e3248 !important;
+    }
+    
+    th, td {
+        padding: 0.5em;
+    }
+    
+    th {
+        background: #112031;
+    }
+    
+    td {
+        background: transparent;
+    }
+    
+    footer p {
+        color: var(--text-color);
+        border-color: var(--secondary-color);
+    }
+}
