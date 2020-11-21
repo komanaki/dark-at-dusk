@@ -1,0 +1,149 @@
+/* ==UserStyle==
+@name           TextMesh Pro Documentation [Dark at dusk]
+@description    Dark theme for the TextMesh Pro documentation
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/textmeshpro-dark-at-dusk.user.css
+@advanced color background-color "Background color" #172535
+@advanced color content-background-color "Content background color" #0c141d
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #2196f3
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Fonts for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Fonts for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+@-moz-document url-prefix("http://digitalnativestudios.com/textmeshpro/docs/") {
+    html {
+        --background-color: /*[[background-color]]*/;
+        --content-background-color: /*[[content-background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+
+    body {
+        color: var(--text-color);
+        background: var(--background-color);
+        font-family: var(--fonts-body);
+    }
+    
+    header a, header a:visited {
+        color: var(--primary-color);
+    }
+    
+    article a, article a:visited {
+        color: var(--primary-color);
+    }
+    
+    article {
+        background: var(--content-background-color);
+    }
+    
+    article header h1,
+    article section h2,
+    article section h3 {
+        color: white;
+    }
+    
+    h2:before, h3:before, h4:before {
+        color: #d4d4d4;
+        font-size: 16px;
+        margin-right: 0.25rem;
+    }
+    
+    article tr > td {
+        padding: 0.25rem 0;
+    }
+    
+    article tr:nth-child(even) {
+        background-color: #0000002e;
+    }
+    
+    article code {
+        padding: 0.1rem 0.25rem;
+        background: var(--code-background-color);
+        font-family: var(--fonts-code);
+    }
+
+    article code, figure > blockquote {
+        background: var(--code-background-color);
+        font-family: var(--fonts-code);
+    }
+    
+    
+    
+    
+}
+
+
+@-moz-document url-prefix("http://digitalnativestudios.com/textmeshpro/docs/ScriptReference/") {
+     html {
+        --background-color: /*[[background-color]]*/;
+        --content-background-color: /*[[content-background-color]]*/;
+        --text-color: /*[[text-color]]*/;
+        --primary-color: /*[[primary-color]]*/;
+        --code-background-color: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+    
+    /* Script Reference */
+    
+    body {
+        background: var(--content-background-color);
+    }
+    
+    div.header, div.header-wrapper {
+        background: var(--background-color);
+    }
+    
+    div.sidebar-wrap {
+        background: transparent;
+    }
+    
+    div.sidebar-menu {
+        border: none;
+    }
+    
+    div.sidebar-menu ul li div.arrow {
+        border: none;
+    }
+    
+    div.sidebar-menu ul li a {
+        color: var(--primary-color);
+    }
+    
+    div.sidebar-menu ul li a.current {
+        background: var(--primary-color);
+    }
+    
+    .content h1,
+    .content h2 {
+        color: white;
+    }
+    
+    .content a {
+        color: var(--primary-color);
+    }
+    
+    table.list tbody {
+        border-color: #1e3248;
+    }
+    
+    pre {
+        color: var(--text-color);
+        font-family: var(--fonts-code);
+        background: var(--code-background-color);
+        border: none;
+    }
+
+    div.footer-wrapper {
+        background: var(--background-color);
+    }
+}
