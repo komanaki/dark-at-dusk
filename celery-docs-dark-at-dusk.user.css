@@ -4,7 +4,7 @@
 @author         Komanaki
 @namespace      Komanaki
 @license        MIT
-@version        1.0.0
+@version        1.1.0
 @homepageURL    https://github.com/komanaki/dark-at-dusk/
 @updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/celery-docs-dark-at-dusk.user.css
 @advanced color background-color "Background color" #0c141d
@@ -139,5 +139,11 @@
         box-shadow: none;
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
+    }
+
+    tt, tt.xref, a tt {
+        color: white;
+        background: var(--code-background-color);
+        border: none;
     }
 }
