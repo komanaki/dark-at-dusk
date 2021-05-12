@@ -1,0 +1,241 @@
+/* ==UserStyle==
+@name           Unity Forum [Dark at dusk]
+@description    Dark theme for the Unity Forum website
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/unity-forum-dark-at-dusk.user.css
+@advanced color background-color "Background color" #0c141d
+@advanced color subnav-color "Sub-navigation color" #222c37
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #2196f3
+@advanced color secondary-color "Secondary color" #112031
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Font stack for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Font stack for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+@-moz-document domain("forum.unity.com") {
+    html {
+        --background: /*[[background-color]]*/;
+        --subnav: /*[[subnav-color]]*/;
+        --text: /*[[text-color]]*/;
+        --primary: /*[[primary-color]]*/;
+        --secondary: /*[[secondary-color]]*/;
+        --code-background: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+
+    html, body {
+        color: var(--text);
+        font-family: var(--fonts-body);
+        background: var(--background);
+    }
+
+    header.main-header {
+        background-color: var(--subnav);
+    }
+
+    #content .pageContent {
+        background-color: transparent;
+    }
+
+    .breadcrumb {
+        background-color: var(--subnav);
+        border: none;
+    }
+
+    .breadcrumb .crust a.crumb {
+        background: black;
+        border: none;
+    }
+
+    .breadcrumb .crust:hover a.crumb {
+        background: #222;
+    }
+
+    .breadcrumb .crust:hover .arrow span {
+        border-left-color: #222;
+    }
+
+    .breadcrumb .crust .arrow span {
+        border-left-color: black;
+    }
+    
+    .navTabs .navTab.selected .tabLinks li {
+        margin-right: 1rem;
+    }
+
+    .navTabs .navTab.selected .tabLinks a, .navTabs .navTab.PopupClosed .navLink {
+        color: white;
+        background: rgb(255 255 255 / 10%);
+    }
+
+    .nodeList .categoryStrip .nodeTitle {
+        font-size: 1.5rem;
+    }
+
+    .nodeList .categoryStrip {
+        background: #222c37;
+    }
+
+    .nodeList .categoryStrip .nodeTitle a {
+        color: white;
+    }
+
+    .nodeDescription {
+        color: #e1e1e1;
+    }
+
+    .nodeList .categoryForumNodeInfo, .nodeList .forumNodeInfo, .nodeList .pageNodeInfo, .nodeList .linkNodeInfo, .discussionListItem {
+        border-bottom-color: #222c37;
+    }
+    
+    .titleBar {
+        border-color: #222c37;
+    }
+
+    .titleBar h1 {
+        padding: 1rem 0;
+        color: white;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    
+    #threadSearch {
+        padding-top: 1rem;
+    }
+    
+    .formPopup input[type="search"] {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+        border: none;
+    }
+
+    .PageNav a {
+        color: white !important;
+        background-color: var(--primary);
+        border-radius: 2px;
+    }
+
+    .discussionList .sectionHeaders a {
+        color: black;
+        font-weight: bold;
+
+    }
+
+    .discussionListItem.visible.sticky {
+        background-color: rgb(33 150 243 / 20%);
+    }
+
+    .discussionListItem:nth-of-type(even) {
+        background-color: rgb(255 255 255 / 7%);
+    }
+
+    .discussionListItem .titleText {
+        padding: 8px 5px;
+    }
+
+    .discussionListItem .posterDate {
+        margin-top: 5px;
+    }
+
+    .itemPageNav a, .itemPageNav span, body .itemPageNav a {
+        color: white;
+    }
+
+    body .itemPageNav a:hover {
+        color:  var(--primary);
+    }
+
+    .discussionList .tagList .tag {
+        height: auto;
+        padding: 2px 5px;
+        color: black;
+        font-weight: bold;
+        line-height: initial;
+        background: #bebebe;
+        border: none !important;
+    }
+
+    .thread_view .threadAlerts dd {
+        color: white;
+    }
+
+    a:link, a:visited, .messageInfo .DateTime {
+        color: var(--primary);
+    }
+    
+    .messageUserBlock h3.userText {
+        margin-bottom: 1rem;
+    }
+
+    .scrollContainer, .PanelScroller .panel, .PanelScrollerOff .panel, .PanelScroller, .baseHtml.noticeContent {
+        background-color: #f4f4f4 !important;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .messageList .message:nth-of-type(even) {
+        background-color: rgb(0 0 0 / 25%);
+    }
+
+    .messageList .message {
+        padding: 1rem 1rem;
+        border-top: none;
+    }
+
+    .messageText {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .bbCodeQuote .quoteContainer .quoteExpand {
+        background: linear-gradient(to bottom, rgba(240, 240, 240, 0) 0%, rgb(17 32 49) 80%);
+    }
+
+    .bbCodeBlock {
+        border: none;
+    }
+
+    .bbCodeBlock pre, .bbCodeBlock .code {
+        font-family: var(--fonts-code);
+        background: var(--code-background);
+    }
+
+    .bbCodeQuote .attribution, .bbCodeBlock .type {
+        color: white;
+        background-color: #243e5a;
+        border: none;
+    }
+
+    span[style*="color: #0600FF"] {
+        color: #9898ff !important;
+    }
+
+    span[style*="color: #0000FF"] {
+        color: #a7f1ed !important;
+    }
+
+    .bbCodeQuote .quoteContainer {
+        background-color: var(--secondary);
+    }
+
+    .bbCodeQuote {
+        border: none;
+    }
+
+    .secondaryContent {
+        background-color: var(--secondary);
+        border: none !important;
+    }
+
+    .sectionFooter {
+        background: transparent;
+        border-color: transparent;
+    }
+}
