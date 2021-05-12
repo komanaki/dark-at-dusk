@@ -4,7 +4,7 @@
 @author         Komanaki
 @namespace      Komanaki
 @license        MIT
-@version        1.0.0
+@version        1.1.0
 @homepageURL    https://github.com/komanaki/dark-at-dusk/
 @updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/django-docs-dark-at-dusk.user.css
 @advanced color background-color "Background color" #101c29
@@ -41,6 +41,10 @@
         background: var(--content-background-color);
     }
 
+    #dev-warning {
+        color: #2b2504;
+    }
+
     .mdzr-boxshadow .sidebar-right [role="main"] {
         box-shadow: 0px 0px 0 0 var(--content-background-color), 0px 0px 0 0 var(--content-background-color), -460px 0 0 0 var(--content-background-color), -1000px 0 0 0 var(--content-background-color), 0px 600px 0 0px var(--content-background-color), -460px 600px 0 0px var(--content-background-color);
     }
@@ -51,6 +55,10 @@
 
     [role="main"] h1, h3, h4 {
         color: var(--primary-color);
+    }
+
+    .section h2 {
+        color: #eee;
     }
 
     tt, code, kbd, span.pre, pre, samp {
@@ -71,6 +79,14 @@
     
     [role="main"] .section {
         border-color: #13563f;
+    }
+    
+    .search-links span.meta a:active, .search-links span.meta a:focus, .search-links span.meta a:hover {
+        color: #ddd;
+    }
+    
+    .search-links span.arrow {
+        color: var(--primary-color);
     }
     
     table.docutils td, table.docutils th {
@@ -164,6 +180,12 @@
         color: #6f6f6f;
     }
 
+    [role="complementary"] .list-links dt, [role="complementary"] .search-links dt,
+    [role="complementary"] .list-links li, [role="complementary"] .search-links li,
+    [role="complementary"] h2, .layout-secondary h2 {
+        border-color: var(--primary-color);
+    }
+    
     [role="complementary"] a {
         color: var(--primary-color);
     }
@@ -177,8 +199,20 @@
         background-color: #2f2b14;
     }
     
+    .note .admonition-title::before, .admonition .admonition-title::before, .help-block .admonition-title::before {
+        opacity: 1;
+    }
+    
     .versionadded, .versionchanged, .deprecated, .versionmodified {
         border-color: #123764;
+    }
+    
+    .browse-horizontal a {
+        color: #999;
+    }
+
+    .browse-horizontal a:hover {
+        color: #eee;
     }
 
 }
