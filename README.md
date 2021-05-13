@@ -52,6 +52,15 @@ Also supports the Scripting Reference part of the website.
 ![First example of dark theme applied to Unity Answers website](img/unity-answers1.png)
 ![Second example of dark theme applied to Unity Answers website](img/unity-answers2.png)
 
+## Unity Documentation [Dark at dusk]
+
+[![Install directly with Stylus badge](https://img.shields.io/badge/Install%20with-Stylus-116b59.svg?longCache=true&style=flat&logo=css3)](https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/unity-documentation-dark-at-dusk.user.css)
+
+This theme is made for the [main Unity documentation](https://docs.unity3d.com/2020.3/Documentation/Manual/UnityManual.html) website.
+
+![First example of dark theme applied to Unity documentation](img/unity-docs1.png)
+![Second example of dark theme applied to Unity documentation](img/unity-docs2.png)
+
 ## Unity Packages Documentation [Dark at dusk]
 
 [![Install directly with Stylus badge](https://img.shields.io/badge/Install%20with-Stylus-116b59.svg?longCache=true&style=flat&logo=css3)](https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/unity-packages-dark-at-dusk.user.css)

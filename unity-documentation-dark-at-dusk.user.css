@@ -1,0 +1,316 @@
+/* ==UserStyle==
+@name           Unity Documentation [Dark at dusk]
+@description    Dark theme for the Unity Documentation website
+@author         Komanaki
+@namespace      Komanaki
+@license        MIT
+@version        1.0.0
+@homepageURL    https://github.com/komanaki/dark-at-dusk/
+@updateURL      https://raw.githubusercontent.com/komanaki/dark-at-dusk/main/unity-documentation-dark-at-dusk.user.css
+@advanced color background-color "Background color" #0c141d
+@advanced color subnav-color "Sub-navigation color" #222c37
+@advanced color text-color "Text color" #c5c5c5
+@advanced color primary-color "Primary color" #2196f3
+@advanced color secondary-color "Secondary color" #112031
+@advanced color code-background-color "Code background color" #1e1e1e
+@advanced text fonts-body "Font stack for body text" "Inter, Seoge UI, sans-serif"
+@advanced text fonts-code "Font stack for code" "Cascadia Code, Consolas, Source Code Pro, Roboto Mono, monospace"
+==/UserStyle== */
+
+
+@-moz-document regexp("https:\\/\\/docs\\.unity3d\\.com\\/([a-z]{2}\\/)?([current\\.\\d]+\\/)?(Manual|ScriptReference|Documentation)\\/.*") {
+    html {
+        --background: /*[[background-color]]*/;
+        --subnav: /*[[subnav-color]]*/;
+        --text: /*[[text-color]]*/;
+        --primary: /*[[primary-color]]*/;
+        --secondary: /*[[secondary-color]]*/;
+        --code-background: /*[[code-background-color]]*/;
+        --fonts-body: /*[[fonts-body]]*/;
+        --fonts-code: /*[[fonts-code]]*/;
+    }
+    
+    html, body {
+        color: var(--text);
+        font-family: var(--fonts-body);
+        background: var(--background);
+    }
+    
+    #master-wrapper {
+        background: var(--background);
+    }
+    
+    div.content-wrap div.content a[href^="http://"],
+    div.content-wrap div.content a[href^="https://"] {
+        padding-right: 0;
+        background: none;
+    }
+
+    div.content-wrap div.content a[href^="http://"]::after,
+    div.content-wrap div.content a[href^="https://"]::after {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-left: 3px;
+        margin-bottom: -3px;
+        filter: invert(1);
+        background: url("https://docs.unity3d.com/2021.2/Documentation/StaticFilesManual/images/link-external.svg") center right no-repeat;
+        background-size: contain;
+    }
+    
+    div.content-wrap div.content a[href^="http://docs.unity3d.com"]::after,
+    div.content-wrap div.content a[href^="https://docs.unity3d.com"]::after {
+        display: none;
+    }
+
+    div.header {
+        background: black;
+    }
+
+    div.header .menu ul li a.selected:after , div.header .more .filler {
+        background: var(--primary);
+    }
+
+    div.header .menu ul li a.selected, div.header .menu ul li a:hover {
+        color: var(--primary);
+    }
+    
+    div.version-number {
+        margin-top: 5px;
+        padding: 5px 5px 0 5px !important;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    div.version-number:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    div.versionSwitcherArrow, div.lang-switcher div.current div.arrow {
+        filter: invert(1) brightness(1);
+    }
+    
+    div.otherversionscontent {
+        margin-top: 4px;
+    }
+    
+    li.LTS, div.version-switcher div.version-list .versions li.supported {
+        border-left-color: var(--primary);
+    }
+    
+    #supportedColour, div.version-switcher div.version-list .description .supported-box {
+        background: var(--primary);
+    }
+        
+    div.version-switcher div.version-list {
+        margin-top: 7px;
+        border-top-color: var(--primary);
+    }
+    
+    div.version-switcher div.version-list:before {
+        border-bottom-color: var(--primary);
+    }
+    
+    div.obsolete-version-number {
+        margin-top: 4px;
+        padding: 5px 7px;
+        color: #631717;
+        border-radius: 2px;
+    }
+    
+    div.lang-switcher {
+        margin-top: 6px;
+        padding: 2px 5px 7px 5px !important;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    div.lang-switcher:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    div.lang-switcher div.lang-list {
+        top: 41px;
+        border-top-color: var(--primary);
+    }
+    
+    div.lang-switcher div.lang-list:before {
+        border-bottom-color: var(--primary);
+    }
+
+    div.toolbar {
+        color: white;
+        background-color: #1d3148;
+    }
+
+    div.toolbar div.content {
+        max-width: 1260px;
+    }
+
+    div.otherversionscontent {
+        color: black;
+    }
+
+    #master-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    #sidebar {
+        position: initial!important;
+    }
+
+    div.sidebar-wrap {
+        color: var(--text);
+        background-color: #0c141d !important;
+        border: none;
+    }
+
+    div.sidebar-menu ul li a {
+        color: var(--text);
+    }
+
+    div.sidebar-menu ul li a.current {
+        color: white;
+    }
+
+    div.sidebar-menu ul li div.leafnode {
+        background: radial-gradient(circle, var(--primary) 50%, rgba(255,255,255,0) 50%);
+        border: none;
+    }
+
+    div.sidebar-menu ul li div.arrow {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+    }
+
+    div.sidebar-menu ul li div.arrow.expanded {
+        background-color: var(--primary); 
+    }
+
+    #customScrollbar::-webkit-scrollbar {
+        background-color: black;
+    }
+
+    #customScrollbar::-webkit-scrollbar-thumb, #customScrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: var(--primary);
+    }
+    
+    .mCSB_scrollTools .mCSB_draggerRail {
+        background: black;
+    }
+    
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+        background-color: var(--primary);
+    }
+
+    #content-wrap.opened-sidebar {
+        max-width: 920px;
+        padding: 0 !important;
+        color: var(--text);
+        font-size: 16px;
+    }
+
+    .nextprev {
+        background: var(--secondary);
+    }
+
+    .nextprev div.icon span {
+        background-color: #19324e;
+    }
+
+    img[src$="iconVerified.png"], img[src$="iconRel.png"], img[src$="iconReleased.png"] { 
+        filter: invert(1) hue-rotate(120deg);
+    }
+
+    img[src$="iconPreview.png"], img[src$="iconPre.png"], img[src$="iconPrerelease.png"], img[src$="iconExperimental.png"] { 
+        filter: invert(1) hue-rotate(172deg);
+    }
+
+    .content .section table thead th {
+        background: var(--secondary);
+        border-color: #1d3148;
+    }
+
+    .content .section table tbody td {
+        border-color: #1d3148;
+    }
+
+    table.list tr:nth-child(odd) {
+        background: var(--secondary);
+    }
+
+    .content-wrap a, .content-wrap a:hover,
+    #master-wrapper a {
+        color: var(--primary) !important;
+    }
+    
+    .blue-btn {
+        background: var(--primary);
+    }
+
+    h1, h2, h3, h4, div.frontpage-section h3 a {
+        color: white;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 23px;
+    }
+    
+    .content figure img {
+        margin-bottom: 4px;
+        background: white;
+        border-radius: 2px;
+    }
+    
+    .content figure figcaption {
+        padding: 0.25rem 0.5rem;
+        border-left: 5px solid white;
+    }
+
+    code, pre, pre code {
+        color: white;
+        font-family: var(--fonts-code);
+        background: var(--code-background) !important;
+        border: none;
+    }
+
+    pre.codeExampleCS {
+        color: #f5f6f7;
+        font-family: var(--fonts-code);
+        background: var(--code-background) !important;
+        border: none;
+    }
+
+    .feedbackbox {
+        background: var(--secondary);
+    }
+
+    div.footer div.menu a {
+        color: var(--primary);
+    }
+
+    .tooltip .tooltiptext {
+        padding: 1em;
+        background-color: #1d3148;
+        color: #fff;
+    }
+
+    table.list tr:hover {
+        outline-color: var(--primary);
+    }
+
+    /* Scripting API */
+    #content-wrap.content-wrap {
+        max-width: 920px;
+        margin: 0;
+    }
+
+    div.content-block {
+        color: var(--text);
+        margin: 0;
+    }
+}
